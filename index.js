@@ -1,54 +1,22 @@
-// server.js
-import express from 'express';
+/* Act 1
+import chalk from 'chalk';
+import {format, isEqual, parseISO} from 'date-fns';
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+console.log(chalk.green('Elias Franco, Valentin Ferreyra, Maximo Matto, Julian Licera, 7mo 4ta'));
 
-// Middleware para parsear el cuerpo de las solicitudes como JSON
-// Esto es necesario para que req.body funcione correctamente en las rutas POST y PUT
-app.use(express.json());
+const hoy=new Date();
+const fformato=format(hoy,'dd/MM/yyyy');
+console.log(chalk.blue('La fecha de hoy es: '+fformato));
 
-// --- Rutas de la Entidad 'Proyectos' ---
+const fentrega='2025-06-13';
+const fentregadate=parseISO(fentrega);
+const hoy2=new Date();
+hoy2.setHours(0,0,0,0);
+const fentregaformato=format(fentregadate,'dd/MM/yyyy');
 
-// Ruta GET /proyectos (Para obtener todos los proyectos)
-app.get('/proyectos', (req, res) => {
-  res.json({ message: 'Esta es la ruta GET de mi entidad proyectos (todos los elementos)' });
-});
-
-// Ruta GET /proyectos/:id (Para obtener un proyecto específico por ID) - Opcional para este ejercicio pero buena práctica
-// app.get('/proyectos/:id', (req, res) => {
-//   const id = req.params.id;
-//   res.json({ message: `Esta es la ruta GET de mi entidad proyectos con ID: ${id}` });
-// });
-
-// Ruta POST /proyectos (Para crear un nuevo proyecto)
-app.post('/proyectos', (req, res) => {
-  // console.log('Cuerpo de la solicitud:', req.body); // Puedes logear el cuerpo para depurar
-  res.json({ message: 'Esta es la ruta POST de mi entidad proyectos' });
-});
-
-// Ruta PUT /proyectos/:id (Para actualizar un proyecto existente)
-app.put('/proyectos/:id', (req, res) => {
-  const id = req.params.id;
-  // console.log(`Cuerpo de la solicitud para actualizar ${id}:`, req.body);
-  res.json({ message: `Esta es la ruta PUT de mi entidad proyectos con ID: ${id}` });
-});
-
-// Ruta DELETE /proyectos/:id (Para eliminar un proyecto)
-app.delete('/proyectos/:id', (req, res) => {
-  const id = req.params.id;
-  res.json({ message: `Esta es la ruta DELETE de mi entidad proyectos con ID: ${id}` });
-});
-
-// --- Ruta Adicional GET / ---
-
-app.get('/', (req, res) => {
-  res.json({ message: 'Bienvenido a la API de mi_proyecto' });
-});
-
-// --- Iniciar el Servidor ---
-
-app.listen(PORT, () => {
-  console.log(`🚀 Servidor Express corriendo en http://localhost:${PORT}`);
-  console.log('Presiona CTRL + C para detenerlo.');
-});
+if(fformato<=fentregaformato){
+    console.log(chalk.yellow(fentregaformato));
+}else{
+    console.log(chalk.red(fentregaformato));
+}
+*/

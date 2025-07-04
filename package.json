@@ -1,14 +1,18 @@
 {
-  "name": "mi_proyecto",
-  "version": "1.2.0",
+  "name": "1er-proyecto",
+  "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "date-fns": "^4.1.0",
+    "express": "^5.1.0"
+  },
+  "type": "module",
   "keywords": [],
   "author": "Elias",
-  "license": "ISC",
-  "description": "Acts 2 de node js"
+  "license": "MIT",
+  "description": "nuse"
 }
